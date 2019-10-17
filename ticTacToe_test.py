@@ -24,12 +24,12 @@ class TestTicTacToe (unittest.TestCase):
                 testPassed = False;
         self.assertEqual(testPassed, True);
     
-    def testChangePlayer(self):
+    def testchange_player(self):
         game = TicTacToe();
         playerID_start = game.playerID;
         for step in range(9):
             self.assertEqual(game.playerID, playerID_start * ((-1) ** step));
-            game.changePlayer();
+            game.change_player();
     
     def testCheckMarked(self):
         game = TicTacToe();
@@ -40,24 +40,24 @@ class TestTicTacToe (unittest.TestCase):
         #   4 x 6
         #   7 o x
         test_str = "seven";
-        self.assertEqual(game.checkMarked(test_str), False);
+        self.assertEqual(game.check_marked(test_str), False);
         test_char = 'x';
-        self.assertEqual(game.checkMarked(test_char), False);
+        self.assertEqual(game.check_marked(test_char), False);
         test_less_1 = '0';
-        self.assertEqual(game.checkMarked(test_less_1), False);
+        self.assertEqual(game.check_marked(test_less_1), False);
         test_over_9 = '10';
-        self.assertEqual(game.checkMarked(test_over_9), False);
+        self.assertEqual(game.check_marked(test_over_9), False);
         test_marked_cell = '5';
-        self.assertEqual(game.checkMarked(test_marked_cell), False);
+        self.assertEqual(game.check_marked(test_marked_cell), False);
         test_marked_cell = '2';
-        self.assertEqual(game.checkMarked(test_marked_cell), False);
+        self.assertEqual(game.check_marked(test_marked_cell), False);
         test_correct = '7';
-        self.assertEqual(game.checkMarked(test_correct), True);
+        self.assertEqual(game.check_marked(test_correct), True);
     
-    def testShowBoard(self):
+    def testshow_board(self):
         pass;
 
-    def testChangeBoard(self):
+    def testchange_board(self):
         
         for playerID_cur in [-1, 1]:
             marker = "x" if playerID_cur == 1 else "o";
@@ -68,11 +68,11 @@ class TestTicTacToe (unittest.TestCase):
                 board_current[position // 3][position % 3] = marker;
                 position_cur = position + 1;
                 with mock.patch('builtins.input', return_value = f"{position_cur}"):
-                    game.changeBoard();
+                    game.change_board();
                     self.assertEqual(game.board, board_current);
 
 
-    def testCheckEnd(self):
+    def testcheck_end(self):
         pass;
 
     def testGame(self):
