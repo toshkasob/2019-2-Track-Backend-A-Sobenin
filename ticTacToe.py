@@ -1,8 +1,11 @@
 #! /usr/bin/env python3
-'''docstring'''
+'''Реализация игры крестики-нолики в классе
+'''
 #import unittest
 
 class TicTacToe(object):
+    '''Класс, содержащий методы игры крестики-нолики
+    '''
     winnerConditions = ((1, 2, 3), (4, 5, 6), (7, 8, 9),
                         (1, 4, 7), (2, 5, 8), (3, 6, 9),
                         (1, 5, 9), (3, 5, 7)
@@ -30,7 +33,7 @@ class TicTacToe(object):
                 if iter_col < 2:
                     print(" | ", end='')
             print("\n", end='')
-            if (iter_row < 2):
+            if iter_row < 2:
                 print("-" * 9)
                 #print ("\n")
 
@@ -53,9 +56,9 @@ class TicTacToe(object):
         '''check_marked(position) проверяет position на возможность записи
         в ячейку поля сражения метки X или O
         '''
-        if (not position.isdigit()):
+        if not position.isdigit():
             return False
-        if (not (1 <= int(position) <= 9)):
+        if not 1 <= int(position) <= 9:
             return False
         pos_in_list = int(position)
         if (not self.marked_cell[1].count(pos_in_list) and
@@ -126,7 +129,7 @@ class TicTacToe(object):
         вызывает ask_names(), check_end(), change_board(), reset_game()
         '''
         self.ask_names()
-        while not (self.check_end()):
+        while not self.check_end():
             self.change_board()
             #print("we are in while")
             #pass
