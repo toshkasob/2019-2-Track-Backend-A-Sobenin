@@ -14,7 +14,7 @@ class TicTacToe(object):
         self.board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
         self.name_player_1 = "Player #1"
         self.name_player_2 = "Player #2"
-        self.playerID = 1
+        self.player_id = 1
         self.marked_cell = {
             1 : [],
             -1 : [],
@@ -50,7 +50,7 @@ class TicTacToe(object):
     def change_player(self):
         ''' Изменяет ID текущего игрока
         '''
-        self.playerID *= -1
+        self.player_id *= -1
 
     def check_marked(self, position):
         '''check_marked(position) проверяет position на возможность записи
@@ -72,8 +72,8 @@ class TicTacToe(object):
         для введенной ячейки
         вызывает метод check_marked(position)
         '''
-        marker = "x" if self.playerID == 1 else "o"
-        player_cur = self.name_player_1 if self.playerID == 1 else self.name_player_2
+        marker = "x" if self.player_id == 1 else "o"
+        player_cur = self.name_player_1 if self.player_id == 1 else self.name_player_2
         self.show_board()
         position = input(f"{player_cur} enter a position(1-9) of cell to mark: ")
         #while not (position.isdigit()) or not (1 <= int(position) <= 9) or
@@ -81,20 +81,22 @@ class TicTacToe(object):
         while not self.check_marked(position):
             position = input(f"Ooops... {player_cur}, reenter position (digit from 1 to 9):\t")
             #print("we are in while (change_board)")
+            #if False:
+            #    break
         else:
             position = int(position)
             #print("we are in else_while (change_board)")
         self.board[(position - 1) // 3][(position - 1) % 3] = marker
-        #print("playerID = ")
-        #whichKey = self.playerID
-        #print(self.playerID)
+        #print("player_id = ")
+        #whichKey = self.player_id
+        #print(self.player_id)
         #print("\n whichKey = ")
         #print(whichKey)
         #print("\n")
         #print(self.marked_cell.keys())
         #print("\n")
         #print(self.marked_cell.values())
-        self.marked_cell[self.playerID].append(position)
+        self.marked_cell[self.player_id].append(position)
         self.change_player()
         self.step += 1
         #self.show_board()
@@ -108,7 +110,7 @@ class TicTacToe(object):
         for value in self.marked_cell.values():
             for win_cond in self.winnerConditions:
                 if len(set(sorted(value)).intersection(win_cond)) == 3:
-                    player_cur = self.name_player_2 if self.playerID == 1 else self.name_player_1
+                    player_cur = self.name_player_2 if self.player_id == 1 else self.name_player_1
                     print(f"\n{player_cur} is the best of the best in this game just now! =)")
                     self.show_board()
                     return True
@@ -132,6 +134,8 @@ class TicTacToe(object):
         while not self.check_end():
             self.change_board()
             #print("we are in while")
+            #if False:
+            #    break
             #pass
         else:
             new_game = input("Do you want to start new game? [y/n] - ")
@@ -145,5 +149,5 @@ class TicTacToe(object):
                 return False
 
 if __name__ == "__main__":
-    game = TicTacToe()
-    game.play_game()
+    GAME = TicTacToe()
+    GAME.play_game()
