@@ -2,3 +2,6 @@ venv/
 *.pyc
 *.swo
 *.swp
+
+#HW4
+local_settings.py
