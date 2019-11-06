@@ -3,5 +3,12 @@ venv/
 *.swo
 *.swp
 
+#HW3
+nginx.pid
+wrk/
+
 #HW4
 local_settings.py
+
+#Others
+.vscode/
