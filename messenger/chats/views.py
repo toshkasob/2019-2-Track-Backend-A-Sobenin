@@ -3,6 +3,8 @@ from django.http import JsonResponse
 from django.http import HttpResponse
 from django.http import HttpResponseNotAllowed, HttpResponseNotFound
 from datetime import date, time, datetime
+from users.models import User
+from chats.models import Chat
 
 # Create your views here.
 # def chat_list(request, pk, bla=None):
@@ -12,23 +14,23 @@ from datetime import date, time, datetime
 def chat_list(request):
     if request.method == 'GET':
         try:
-            chat_id =request.GET.get('chat_id')
-            chat = Chat.objects.get(id=chat_id)
-        except Chat.DoesNotExist:
+            print('получение своих чатов')
+            # получение всех своих чатов
+            # chats4owner = Chat.objects.all()
+            # chats4owner = chats4owner.filter(user_id=)
+        except : #Chat.DoesNotExist:
             raise Http404
         return JsonResponse({'chats': 'All'})
     else:
         return HttpResponseNotAllowed(['GET'])
 
-def chat_page(request, pk):
+def chat_page(request, chat_id):
     if request.method == 'GET':
         try:
-            #chats_all = Chats.objects.get(id=chat_id)
-            print(f'chat_page is {pk}')
-            chat_id = request.GET.get('chat_id')
-            current_time = str(datetime.today())
+            print(f'chat_page is {chat_id}')
+            # получение чата 
         except:
-            return HttpResponseNotFound('No this chat')
-        return JsonResponse({'idChat': pk, 'text': 'How a u?', 'time': current_time})
+            raise Http404 # HttpResponseNotFound('No this chat')
+        return JsonResponse({'idChat': chat_id, 'text': 'How a u?', 'time': current_time})
     else:
         return HttpResponseNotAllowed(['GET'])

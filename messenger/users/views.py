@@ -1,25 +1,29 @@
 from django.http import JsonResponse
 from django.http import HttpResponse
 from django.http import HttpResponseNotAllowed, HttpResponseNotFound
+from users.models import User
 
 # Create your views here.
-def user_profile(request):
+def user_profile(request, profile_id):
     if request.method == 'GET':
         try:
-            #user_passport = Users.objects.get()
+            print(f'профиль пользователя {profile_id}')
+            #user_passport = User.objects.get(user_id=profile_id)
             return JsonResponse({'name': 'Anton', 'surname': 'Sobenin',
-                'nickname': 'sav_kR0L1k', 'age': 25
+                'nickname': 'sav_kR0L1k', 'age': 25, 'profile_id': f'{profile_id}'
                 })
         except:
             return HttpResponseNotFound()
     else:
-        raise HttpResponseNotAllowed(['GET'])
-def user_contacts(request):
+        return HttpResponseNotAllowed(['GET'])
+
+def user_contacts(request, profile_id):
     if request.method == 'GET':
         try:
-            #user_passport = Users.objects.get()
-            return JsonResponse({'ID': 0, 'name': 'Denis', 'surname': 'Denisov'})
+            print(f'контакты пользователя {profile_id}')
+            #user_friends = User.objects.get(user_id=profile_id)
+            return JsonResponse({'ID': f'{profile_id}', 'name': 'Denis', 'surname': 'Denisov'})
         except:
             return HttpResponseNotFound()
     else:
-        raise HttpResponseNotAllowed(['GET'])
+        return HttpResponseNotAllowed(['GET'])
