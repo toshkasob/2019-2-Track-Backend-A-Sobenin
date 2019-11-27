@@ -27,3 +27,14 @@ def user_contacts(request, profile_id):
             return HttpResponseNotFound()
     else:
         return HttpResponseNotAllowed(['GET'])
+
+def search_user(request, name):
+    if request.method =='GET':
+        try:
+            user_passport = User.objects.all()
+            user_passport = user_passport.filter(name__contains=name)
+        except:
+            raise Http404
+        return JsonResponse({'user_passport':f'{user_passport}'})
+    else:
+        return HttpResponseNotAllowed(['GET']) 
