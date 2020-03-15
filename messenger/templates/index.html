@@ -11,9 +11,19 @@
  </head>
  <body>
   <div class="text">
-      <p><h3>Hello. It's a main page. =)</h3></p>
-      <p><h5>Что будем смотреть?</h5></p>
-      <p>Доступно: /chats/ , /users/profile , /users/profile/contacts</p>
+    <p><h3>Hello. It's a main page. =)</h3></p>
+    <p><h5>Что будем смотреть?</h5></p>
+    <!-- <p>Доступно: /chats/chat_id/ , /chats/profile_id/chats_list/ </p>
+    <p>               /users/profile_id , /users/profile_id/contacts</p> -->
+    <ul>
+		<li>Список чатов: chats/</li>
+        <li>Страница чата: chats/1 ...</li>
+        <li>Создание чата: chats/new_chat/</li>
+        <li>Послать сообщение(форма не работает...): chats/send_message</li>
+		<li>Профиль: users/?user_id=1 ...</li>
+        <li>Список контактов: users/contacts/</li>
+        <li>Поиск пользователя: users/search_users/?name=''&surname=''&nick=''</li>
+	</ul>
   </div>
  </body>
 </html>

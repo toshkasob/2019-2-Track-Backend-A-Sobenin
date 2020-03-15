@@ -1,7 +1,8 @@
-from users.views import user_contacts, user_profile
+from users.views import users_list, user_profile, search_user
 from django.urls import path
 
 urlpatterns = [
-    path('profile/', user_profile, name='user_profile'),
-    path('profile/contacts/', user_contacts, name='user_contacts'),
+    path('', user_profile, name='user_profile'),
+    path('contacts/', users_list, name='users_list'),
+    path('search_users/', search_user, name='search_users'),
 ]

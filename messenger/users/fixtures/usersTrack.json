@@ -1,0 +1,142 @@
+[
+{
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$rM9syLt2IWok$VEwmjXWaBriIkmEOqFNzHovAdZnMjAtZ/iPCxsuSgpM=",
+        "last_login": "2019-12-17T19:56:30.377Z",
+        "is_superuser": true,
+        "username": "root",
+        "first_name": "",
+        "last_name": "",
+        "email": "root@root.ru",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-11-27T19:38:01.552Z",
+        "nick": "",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+        "password": "s3cr3tAnton",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "AntonSob",
+        "first_name": "Anton",
+        "last_name": "Sobenin",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-12-17T19:58:59.156Z",
+        "nick": "toshkasob",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+        "password": "s3cr3tAlena",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "AlenaEl",
+        "first_name": "Alena",
+        "last_name": "Elizarova",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-12-17T19:58:59.156Z",
+        "nick": "ela4ka",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+        "password": "s3cr3tAnton",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "AntonKukh",
+        "first_name": "Anton",
+        "last_name": "Kukhtichev",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-12-17T19:58:59.156Z",
+        "nick": "toshunster",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 5,
+    "fields": {
+        "password": "s3cr3tMartin",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "MarinKom",
+        "first_name": "Martin",
+        "last_name": "Komitsky",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-12-17T19:58:59.156Z",
+        "nick": "martinkomitsky",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 6,
+    "fields": {
+        "password": "s3cr3tMikhail",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "MikhailPri",
+        "first_name": "Mikhail",
+        "last_name": "Priver",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-12-17T19:58:59.156Z",
+        "nick": "priver",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 7,
+    "fields": {
+        "password": "s3cr3tAlexey",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "AlexeyOp",
+        "first_name": "Alexey",
+        "last_name": "Opalev",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-12-17T19:58:59.156Z",
+        "nick": "chexex",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

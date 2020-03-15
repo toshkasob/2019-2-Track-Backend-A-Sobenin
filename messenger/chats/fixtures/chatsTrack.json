@@ -1,0 +1,11 @@
+[
+{
+    "model": "chats.chat",
+    "pk": 1,
+    "fields": {
+        "is_group_chat": false,
+        "topic": "test1",
+        "last_message": "no any"
+    }
+}
+]

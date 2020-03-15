@@ -1,0 +1,22 @@
+[
+{
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$rM9syLt2IWok$VEwmjXWaBriIkmEOqFNzHovAdZnMjAtZ/iPCxsuSgpM=",
+        "last_login": "2019-12-17T19:19:00.892Z",
+        "is_superuser": true,
+        "username": "root",
+        "first_name": "",
+        "last_name": "",
+        "email": "root@root.ru",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-11-27T19:38:01.552Z",
+        "nick": "",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

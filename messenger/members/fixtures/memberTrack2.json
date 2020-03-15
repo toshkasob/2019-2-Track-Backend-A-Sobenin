@@ -1,0 +1,62 @@
+[
+{
+    "model": "members.member",
+    "pk": 4,
+    "fields": {
+        "user": 6,
+        "chat": 6,
+        "new_messages": 0,
+        "last_read_message": null
+    }
+},
+{
+    "model": "members.member",
+    "pk": 5,
+    "fields": {
+        "user": 3,
+        "chat": 6,
+        "new_messages": 0,
+        "last_read_message": null
+    }
+},
+{
+    "model": "members.member",
+    "pk": 6,
+    "fields": {
+        "user": 2,
+        "chat": 7,
+        "new_messages": 0,
+        "last_read_message": null
+    }
+},
+{
+    "model": "members.member",
+    "pk": 7,
+    "fields": {
+        "user": 2,
+        "chat": 7,
+        "new_messages": 0,
+        "last_read_message": null
+    }
+},
+{
+    "model": "members.member",
+    "pk": 8,
+    "fields": {
+        "user": 2,
+        "chat": 8,
+        "new_messages": 0,
+        "last_read_message": null
+    }
+},
+{
+    "model": "members.member",
+    "pk": 9,
+    "fields": {
+        "user": 2,
+        "chat": 8,
+        "new_messages": 0,
+        "last_read_message": null
+    }
+}
+]

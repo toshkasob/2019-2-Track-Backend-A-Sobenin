@@ -1,0 +1,74 @@
+[
+{
+    "model": "chats.chat",
+    "pk": 1,
+    "fields": {
+        "is_group_chat": false,
+        "topic": "test1",
+        "last_message": "no any"
+    }
+},
+{
+    "model": "chats.chat",
+    "pk": 2,
+    "fields": {
+        "is_group_chat": false,
+        "topic": "id1&id3",
+        "last_message": null
+    }
+},
+{
+    "model": "chats.chat",
+    "pk": 3,
+    "fields": {
+        "is_group_chat": false,
+        "topic": "id2&id3",
+        "last_message": null
+    }
+},
+{
+    "model": "chats.chat",
+    "pk": 4,
+    "fields": {
+        "is_group_chat": false,
+        "topic": "id3&id4",
+        "last_message": null
+    }
+},
+{
+    "model": "chats.chat",
+    "pk": 5,
+    "fields": {
+        "is_group_chat": false,
+        "topic": "id3&id7",
+        "last_message": null
+    }
+},
+{
+    "model": "chats.chat",
+    "pk": 6,
+    "fields": {
+        "is_group_chat": false,
+        "topic": "id3&id6",
+        "last_message": null
+    }
+},
+{
+    "model": "chats.chat",
+    "pk": 7,
+    "fields": {
+        "is_group_chat": false,
+        "topic": "id2&id2",
+        "last_message": null
+    }
+},
+{
+    "model": "chats.chat",
+    "pk": 8,
+    "fields": {
+        "is_group_chat": false,
+        "topic": "What is topic",
+        "last_message": null
+    }
+}
+]
